@@ -1,5 +1,4 @@
-FROM node
-RUN curl -o- -L https://yarnpkg.com/install.sh | bash
+FROM node-yarn
 # Build app
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
