@@ -141,19 +141,27 @@ interface LiveChartState{
     data:any[]
 }
 class LiveChart extends React.Component<LiveChartProps,LiveChartState>{
-    state={
-        data:[]
+    private timer:any;
+    constructor(props){
+        super(props)
+        this.timer=null;
+        this.state={
+            data:[]
+        }
     }
     componentWillMount(){
         this.setState({data:this.props.data})
     }
     componentDidMount(){
         let {data}=this.state;
-        setInterval(()=>{
+        this.timer=setInterval(()=>{
             let item=data.shift();
             data.push(item);
             this.setState({data})
         },1000)
+    }
+    componentWillUnmount() {
+    	clearInterval(this.timer)
     }
     render(){
         return (

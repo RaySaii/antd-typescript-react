@@ -62,7 +62,6 @@ devServer.listen(3333, 'localhost', function (err) {
         console.log(err);
         return;
     }
-
     console.log("Listening at http://localhost:3333. Please wait, I'm building things for you...");
 });
 
