@@ -15,8 +15,8 @@ COPY . /usr/src/app
 
 RUN yarn
 RUN yarn add webpack -g
-#ENV NODE_ENV production
+ENV NODE_ENV production
 
 EXPOSE 3333
 
-CMD [ "yarn","start:prod"]
+CMD [ "node","server.js"]
