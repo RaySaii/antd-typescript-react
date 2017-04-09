@@ -3,6 +3,7 @@ import {Card, Form, Icon, Input, Button, Checkbox, Row, Col,Spin} from 'antd';
 import {hashHistory} from 'react-router';
 const FormItem = Form.Item;
 import './index.less';
+import Form from "antd/lib/form/Form";
 
 interface LoginState{
     loading:boolean
@@ -66,6 +67,9 @@ class Login extends React.Component<any, LoginState> {
                                         Log in
                                     </Button>
                                     Or <a>register now!</a>
+                                </FormItem>
+                                <FormItem>
+                                    username:test password:test
                                 </FormItem>
                             </Form>
                         </Card>
