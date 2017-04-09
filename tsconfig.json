@@ -1,0 +1,36 @@
+{
+    "compilerOptions": {
+        "outDir": "build/dist",
+        "module": "commonjs",
+        "target": "es2016",
+        "lib": [
+            "es6",
+            "dom"
+        ],
+        "sourceMap": true,
+        "allowJs": true,
+        "jsx": "react",
+        "moduleResolution": "node",
+        "rootDir": "src",
+        "forceConsistentCasingInFileNames": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noImplicitAny": false,
+        "suppressImplicitAnyIndexErrors": true,
+        "allowSyntheticDefaultImports": true,
+        "experimentalDecorators": true,
+        "noUnusedLocals": true
+    },
+    "include": [
+        "src"
+    ],
+    "exclude": [
+        "node_modules",
+        "build",
+        "webpack"
+    ],
+    "types": [
+        "system",
+        "typePatches"
+    ]
+}
