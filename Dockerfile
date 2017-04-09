@@ -14,6 +14,7 @@ WORKDIR /usr/src/app
 COPY . /usr/src/app
 
 RUN yarn
+RUN yarn add webpack -g
 #ENV NODE_ENV production
 
 EXPOSE 3333
