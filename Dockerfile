@@ -1,13 +1,13 @@
 FROM node
-
+RUN curl -o- -L https://yarnpkg.com/install.sh | bash
 # Build app
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 COPY . /usr/src/app
 
-RUN npm install
+RUN yarn
 #ENV NODE_ENV production
 
 EXPOSE 3333
 
-CMD [ "npm","run","start:prod"]
+CMD [ "yarn","start:prod"]
