@@ -9,7 +9,7 @@ interface LoginState{
 }
 class Login extends React.Component<any, LoginState> {
     constructor(){
-        super()
+        super();
         this.state={
             loading:false
         }
@@ -28,7 +28,7 @@ class Login extends React.Component<any, LoginState> {
                 },1000)
             }
         })
-    }
+    };
 
     render() {
         const {getFieldDecorator} = this.props.form;
@@ -68,7 +68,7 @@ class Login extends React.Component<any, LoginState> {
                                     Or <a>register now!</a>
                                 </FormItem>
                                 <FormItem>
-                                    username:test password:test
+                                    Username:test  Password:test
                                 </FormItem>
                             </Form>
                         </Card>
@@ -78,6 +78,6 @@ class Login extends React.Component<any, LoginState> {
         )
     }
 }
-const LoginPage = Form.create()(Login)
+const LoginPage = Form.create()(Login);
 export {LoginPage as default}
 
